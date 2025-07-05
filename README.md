@@ -74,3 +74,5 @@ The project follows a modular, event-driven architecture suitable for real-time 
 - The project simulates a real-world dynamic pricing scenario using live dataflow.
 - Pathway enables low-latency updates and efficient windowed computation.
 - The code is modular and easily extendable to other pricing strategies or datasets.
+
+💡 To view the interactive visualizations, run the notebooks in this repository on Google Colab.
