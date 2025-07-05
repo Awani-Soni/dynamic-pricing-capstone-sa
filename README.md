@@ -13,4 +13,4 @@ A real-time data streaming project that dynamically adjusts parking prices based
 
 ## Architecture Diagram
 
-![Architecture Diagram]("Architecture Diagram.png")
+![Architecture Diagram](Architecture Diagram.png)
