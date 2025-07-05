@@ -13,12 +13,4 @@ A real-time data streaming project that dynamically adjusts parking prices based
 
 ## Architecture Diagram
 
-graph TD
-    A[ Parking Data ] --> B[ Preprocessing ]
-    B --> C[ Pathway Streaming Engine]
-    C --> D1[ Model 1: Linear Pricing]
-    C --> D2[ Model 2: Demand-Based Pricing]
-    D1 --> E[ Price Output with Timestamp ]
-    D2 --> F[ Price Output with Timestamp ]
-    E --> G[ Bokeh + Panel Visual Dashboard]
-    F --> G
+![Architecture Diagram]("Architecture Diagram.png")
