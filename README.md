@@ -39,26 +39,29 @@ The project follows a modular, event-driven architecture suitable for real-time 
 
 ###  4. Pricing Models
 
-####  Model 1: Baseline Linear Price Model
-- Formula:  
-  \[
-  \text{Price}_t = 10 + \alpha \times \left( \frac{\text{Occupancy}}{\text{Capacity}} \right)
-  \]
-- Simple linear relationship with occupancy rate.
-- Constant α = 0.4
-- Stateless: Price is recomputed per session from base price.
+#### Model 1: Baseline Linear Price Model
 
-####  Model 2: Demand-Based Pricing
-- Formula:
-  \[
-  \text{Price}_t = \text{BasePrice} \times (1 + \lambda \cdot \text{NormalizedDemand})
-  \]
-- Demand function uses multiple features:
-  \[
-  \text{Demand} = \alpha \cdot \frac{\text{Occupancy}}{\text{Capacity}} + \beta \cdot \text{QueueLength} - \gamma \cdot \text{Traffic} + \delta \cdot \text{IsSpecialDay} + \varepsilon \cdot \text{VehicleType}
-  \]
-- Demand is normalized to [0,1], and price is capped between ₹5 and ₹20.
+**Formula:**  
+`Price_t = 10 + α × (Occupancy / Capacity)`
+
+- Simple linear relationship with occupancy rate  
+- Constant α = 0.4  
+- Stateless: Price is recomputed per session from base price  
+
+---
+
+#### Model 2: Demand-Based Pricing
+
+**Formula:**  
+`Price_t = BasePrice × (1 + λ × NormalizedDemand)`
+
+**Demand Function:**  
+`Demand = α × (Occupancy / Capacity) + β × QueueLength - γ × Traffic + δ × IsSpecialDay + ε × VehicleType`
+
+- Demand is normalized to [0, 1]  
+- Price is capped between ₹5 and ₹20  
 - Constants: α = 0.4, β = 0.3, γ = 0.2, δ = 0.2, ε = 0.5, λ = 1.0
+
 
 
 ###  5. Visualization
